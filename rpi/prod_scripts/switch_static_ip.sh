@@ -19,6 +19,9 @@ echo "    eth0:" >> static-ip.yaml
 echo "      dhcp4: no" >> static-ip.yaml
 echo "      addresses: [$IP_ADDR/$SUBNET]" >> static-ip.yaml
 echo "      gateway4: $DEFAULT_GATEWAY" >> static-ip.yaml
+echo "      nameservers:" >> static-ip.yaml
+echo "          addresses: [8.8.8.8, 8.8.4.4]" >> static-ip.yaml
+
 
 # Move the new YAML file to /etc/netplan and apply the changes
 sudo mv static-ip.yaml /etc/netplan/50-cloud-init.yaml
