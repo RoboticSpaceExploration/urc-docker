@@ -36,9 +36,7 @@ RUN apt-get install iputils-ping iputils-tracepath -y
  
 RUN echo "source /prod/build/catkin_ws/devel/setup.sh" >> ~/.bashrc
 
-RUN echo "export ROS_MASTER_URI=http://178.171.151.1:11311/" >> ~/.bashrc
-
-#RUN echo "export ROS_IP=" >> ~/.bashrc
+RUN echo "export ROS_MASTER_URI=http://128.171.151.1:11311/" >> ~/.bashrc
 
 ENTRYPOINT ["/bin/bash","-c"]
 
