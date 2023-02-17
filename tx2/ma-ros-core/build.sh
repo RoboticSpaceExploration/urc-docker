@@ -1,1 +1,1 @@
-sudo docker buildx build --platform linux/amd64 -t ma-ros-core --load .
+sudo docker buildx build --platform linux/arm64 -t ma-ros-core --load .

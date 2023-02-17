@@ -1,4 +1,4 @@
-FROM bretwitt/ma-ros-base
+FROM bretwitt/ros-base
 
 RUN apt-get install ros-melodic-xacro
 RUN apt-get install ros-melodic-joint-state-publisher -y
