@@ -36,10 +36,9 @@ RUN apt-get install iputils-ping iputils-tracepath -y
  
 RUN echo "source /prod/build/catkin_ws/devel/setup.sh" >> ~/.bashrc
 
-RUN echo "export ROS_MASTER_URI=http://178.171.151.1:11311/" >> ~/.bashrc
+COPY entrypoint.sh /prod/entrypoint.sh
 
-#RUN echo "export ROS_IP=" >> ~/.bashrc
-
-ENTRYPOINT ["/bin/bash","-c"]
+#ENTRYPOINT ["/bin/bash","-c"]
+ENTRYPOINT ["./entrypoint.sh"]
 
 EXPOSE 11311
