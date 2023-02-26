@@ -8,9 +8,9 @@ RUN cd /prod/build && git clone --branch v2.45.0 https://github.com/IntelRealSen
 
 RUN apt-get install xorg-dev libglu1-mesa-dev -y
 
-RUN cd /prod/build/librealsense && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=release -DFORCE_RSUSB=true
+RUN cd /prod/build/librealsense && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DFORCE_RSUSB_BACKEND=true
 
-RUN cd /prod/build/librealsense/build && make install -j8
+RUN cd /prod/build/librealsense/build && make install -j4
 
 # INSTALL REALSENSE-ROS
 
