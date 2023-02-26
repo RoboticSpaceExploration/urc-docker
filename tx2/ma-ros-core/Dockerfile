@@ -10,5 +10,5 @@ RUN chmod +x /prod/start_core.sh
 
 EXPOSE 11311
 
-ENTRYPOINT ["/prod/start_core.sh"]
+ENTRYPOINT ["./prod/start_core.sh"]
 

@@ -16,5 +16,5 @@ RUN echo source /prod/urc_gnc_autonav_ws/devel/setup.sh >> ~/.bashrc
 
 WORKDIR /prod
 
-EXPOSE 8080
+EXPOSE 11311
 
