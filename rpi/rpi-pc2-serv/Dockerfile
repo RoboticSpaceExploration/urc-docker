@@ -12,10 +12,11 @@ RUN mkdir /prod
 
 
 COPY client.py /prod/client.py
-COPY vlc_serv.py /prod/vlc_serv.py
+#COPY vlc_serv.py /prod/vlc_serv.py
+
 COPY server_entrypoint.sh /prod/server_entrypoint.sh
 
-ENTRYPOINT ["./prod/server_entrypoint.sh"]
+ENTRYPOINT ["/prod/server_entrypoint.sh"]
 
 WORKDIR prod
 EXPOSE 8000
