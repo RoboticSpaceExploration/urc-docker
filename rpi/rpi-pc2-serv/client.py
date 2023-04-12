@@ -26,7 +26,7 @@ try:
     camera.framerate = 24
     camera.start_preview()
     time.sleep(2)
-    camera.start_recording(connection, format='h264')
+    camera.start_recording(connection, format='rgb')
     while 1:
         continue
 finally:
