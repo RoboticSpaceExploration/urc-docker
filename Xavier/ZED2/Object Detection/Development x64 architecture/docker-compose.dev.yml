@@ -1,0 +1,19 @@
+version: '3'
+services:
+  zed-ros-dev-container:
+    container_name: zed-ros-dev-container
+    image: ros-zed-sdk-ubun-20.04:latest
+    privileged: true
+    stdin_open: true
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    tty: true
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
+      - ~\/Desktop\docker-file:/data
+
