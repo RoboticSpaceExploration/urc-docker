@@ -1,0 +1,14 @@
+version: '3'
+services:
+  zed-ros-dev-container:
+    container_name: ublox-ros-dev-container
+    image: ros-ublox-sdk-ubunt-20.04:latest
+    command: ["rosrun", "ground_rtk", "ground_station_rtk.py", "--lat", "${LAT}", "--lng", "${LNG}", "--zed", "${ZED}", "--interface", "${INTERFACE}"]
+    privileged: true
+    stdin_open: true
+    environment:
+        - ROS_MASTER_URI=${ROS_MASTER_URI}
+    network_mode: "host"
+    tty: true
+    volumes:
+      - /dev/bus/usb:/dev/bus/usb
